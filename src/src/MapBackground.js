@@ -9,7 +9,7 @@ const MapBackground = () => {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: '#f0f0f0', // Yalnızca arka plan rengi
+        backgroundColor: '#f0f0f0', // Arka plan rengini sabitledik
         zIndex: 0,
       }}
     />
