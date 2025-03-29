@@ -1,29 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const MapBackground = () => {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCV0Ajdezk2kzVdyBEFA-RgNsrxvwqYKMo`;
-    script.async = true;
-    script.onload = () => {
-      new window.google.maps.Map(document.getElementById("map"), {
-        center: { lat: 40.7128, lng: -74.0060 }, // New York koordinatları
-        zoom: 12,
-        disableDefaultUI: true,
-      });
-    };
-    document.head.appendChild(script);
-  }, []);
-
   return (
     <div
-      id="map"
       style={{
         position: 'absolute',
         top: 0,
         left: 0,
-        bottom: 0,
         right: 0,
+        bottom: 0,
+        backgroundColor: '#f0f0f0', // Yalnızca arka plan rengi
         zIndex: 0,
       }}
     />
