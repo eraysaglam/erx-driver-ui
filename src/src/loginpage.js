@@ -3,9 +3,9 @@ import React from 'react';
 const LoginPage = () => {
   return (
     <div style={styles.container}>
+      <div style={styles.overlay}></div>
       <div style={styles.card}>
-        <h1 style={styles.title}>ErX Driver</h1>
-        <p style={styles.subtitle}>Welcome back, please login</p>
+        <h1>ErX Driver Giriş</h1>
         <input style={styles.input} type="text" placeholder="Kullanıcı Adı" />
         <input style={styles.input} type="password" placeholder="Şifre" />
         <button style={styles.button}>Giriş Yap</button>
@@ -17,30 +17,29 @@ const LoginPage = () => {
 const styles = {
   container: {
     height: '100vh',
-    backgroundColor: '#f0f0f0', // Gri arka plan
+    backgroundColor: '#f0f0f0', // Arka plan rengini sabitledik
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    fontFamily: 'Arial, sans-serif',
+    fontFamily: 'sans-serif',
+  },
+  overlay: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+    zIndex: 0,
   },
   card: {
-    backgroundColor: 'white',
-    padding: '30px',
+    backgroundColor: 'rgba(255, 255, 255, 0.95)',
+    padding: '40px',
     borderRadius: '10px',
-    boxShadow: '0px 5px 15px rgba(0, 0, 0, 0.1)',
+    boxShadow: '0 5px 15px rgba(0,0,0,0.3)',
+    zIndex: 1,
     minWidth: '300px',
     textAlign: 'center',
-  },
-  title: {
-    fontSize: '24px',
-    fontWeight: 'bold',
-    marginBottom: '10px',
-    color: '#007bff',
-  },
-  subtitle: {
-    fontSize: '16px',
-    color: '#777',
-    marginBottom: '20px',
   },
   input: {
     width: '100%',
